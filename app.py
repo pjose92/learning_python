@@ -17,3 +17,7 @@ print("The sum is:", result)
 print(max(3, 4, 18, 2, 5, 19))
 print(min(3, 4, 18, 1, 30, 20))
 
+# User's input
+name = input('Input your name: ')
+age = int(input('Input your age: '))
+print('Your name is ' + name + ' and you are', age)
