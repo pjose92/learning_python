@@ -78,3 +78,58 @@ if is_prime(number):
     print(f"{number} is a prime number.")
 else:
     print(f"{number} is not a prime number.")
+
+
+def authenticate(username, password):
+    """Simple authentication function."""
+    valid_username = "admin"
+    valid_password = "password123"
+    
+    if username == valid_username and password == valid_password:
+        return "Authentication successful!"
+    else:
+        return "Authentication failed."
+
+# Test the function
+user = input("Enter username: ")
+pwd = input("Enter password: ")
+print(authenticate(user, pwd))
+
+
+from cgi import print_environ
+import random
+import string
+
+def generate_password(length=8):
+    """Generate a random password of a given length."""
+    characters = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(random.choice(characters) for i in range(length))
+    return password
+
+# Test the function
+length = int(input("Enter the desired password length: "))
+print(f"Generated password: {generate_password(length)}")
+
+
+def fibonacci(n):
+    """Generate Fibonacci sequence up to n terms."""
+    fib_seq = [0, 1]
+    while len(fib_seq) < n:
+        fib_seq.append(fib_seq[-1] + fib_seq[-2])
+    return fib_seq
+
+# Test the function
+terms = int(input("Enter the number of terms: "))
+print(f"The first {terms} terms of the Fibonacci sequence are: {fibonacci(terms)}")
+# moonxmgl
+
+# topples - can't change it. it does allow repetition of same value 
+three_numbers = tuple((1, 2, 3, 1, 2));
+strings = ('home', 'land', 'eartch')
+print(three_numbers)
+print(len(three_numbers))
+print(strings)
+numbers_strings = (1, 2, 3, True, 'Home', 3, 1)
+print(type(numbers_strings[0]))
+
+
